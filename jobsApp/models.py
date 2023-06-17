@@ -17,7 +17,7 @@ def image_upload(instance,filename):
 
 # Job table/Entity
 class Job(models.Model):
-    title = models.CharField(max_length=100)
+    tittle = models.CharField(max_length=100)
     job_type = models.CharField(max_length=15 , choices=JOB_TYPE)
     description = models.TextField(max_length=1000)
     published_at = models.DateTimeField(auto_now=True)
@@ -39,7 +39,7 @@ class Job(models.Model):
     on_delete=models.CASCADE)
     
     def save(self,*args, **kwargs):
-        self.slug = slugify(self.title) # slugify will take the title and replace the space with underscore (job-board-software-engineer)
+        self.slug = slugify(self.tittle) # slugify will take the title and replace the space with underscore (job-board-software-engineer)
         super(Job,self).save(*args, **kwargs)
        
        
@@ -80,3 +80,4 @@ class Apply(models.Model):
         db_table = "application_table"
 
 
+                                                       

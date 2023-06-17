@@ -5,7 +5,7 @@ from .models import Job, Category, Apply
 
 # Register your models here.
 class JobAdmin(admin.ModelAdmin):
-    list_display = ('title', 'job_type', 'vacancy', 'salary', 'experience', 'category' )
+    list_display = ('tittle', 'job_type', 'vacancy', 'salary', 'experience', 'category' )
     list_filter = ['job_type', 'experience', 'salary']
 
 class CategoryAdmin(admin.ModelAdmin):

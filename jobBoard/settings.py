@@ -41,7 +41,11 @@ INSTALLED_APPS = [
   
     # Installed Apps
     'jobsApp',
-    # 'accounts',
+    
+    # 3rd party Apps
+    'django_filters',
+
+
 ]
 
 MIDDLEWARE = [
