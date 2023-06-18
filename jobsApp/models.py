@@ -44,7 +44,7 @@ class Job(models.Model):
        
        
     def __str__(self):
-        return self.title
+        return self.tittle
     
     class Meta:
         ordering = ['-published_at']
